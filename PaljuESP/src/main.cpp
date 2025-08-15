@@ -6,9 +6,9 @@
 #include <DallasTemperature.h>
 
 // Wi-Fi and server settings
-const char* ssid = "Batman";
-const char* password = "Apinat03";
-const char* server_url = "http://192.168.1.5:5000/api/data";
+const char* ssid = "your wifi username";
+const char* password = "your wifi password";
+const char* server_url = "url address";
 
 // Sensor pins
 #define ONE_WIRE_BUS_YLA 4
