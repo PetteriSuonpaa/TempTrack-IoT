@@ -5,9 +5,9 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
                                                   
-const char* ssid = "Batman";
-const char* password = "Apinat03";
-const char* server_url = "http://192.168.1.3:5000/api/data";
+const char* ssid = "your wifi username";
+const char* password = "your wifi password";
+const char* server_url = "url address";
 
 #define ONE_WIRE_BUS_JARVI 4
 
