@@ -22,7 +22,33 @@ IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flas
 - **Raspberry Pi 5** – Local server and dashboard hosting  
 
 ---
+## 🛠️ Project Process
 
+### Motivation
+TempTrack-IoT was created to monitor temperature in real-time across multiple locations in a local network, providing both live and historical data via an easy-to-access web dashboard.
+
+### Hardware Selection
+- **ESP32** – Affordable, WiFi-enabled microcontroller ideal for IoT sensors
+- **Dallas Temperature Sensors** – Reliable and accurate for multiple sensor setups
+- **Raspberry Pi 5** – Low-cost local server to host backend API and frontend dashboard
+
+### Architecture Design
+The system is split into three main components:
+1. **ESP32 Sensor Nodes** – Read temperature and send JSON data over WiFi
+2. **Flask Backend (Raspberry Pi 5)** – Receives data from sensors and stores it
+3. **React + Vite + Tailwind + ShadCN Dashboard** – Displays real-time and historical data
+
+### Development Steps
+1. Prototype ESP32 sensors with PlatformIO and Dallas Temperature sensors  
+2. Build Flask backend with API endpoints to receive and serve sensor data  
+3. Develop responsive React dashboard with live charts and historical views  
+4. Integrate backend and frontend, test on local network  
+5. Automate startup with systemd services on Raspberry Pi  
+
+### Future Improvements
+- Add authentication for dashboard access  
+- Support additional sensor types (humidity, pressure, etc.)  
+- Enable remote access with secure tunneling or VPN
 ## 📸 Screenshots
 
 _Add screenshots of your dashboard here to make it visually appealing._
