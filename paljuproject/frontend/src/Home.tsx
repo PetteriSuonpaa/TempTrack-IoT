@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     const fetchTemperatures = async () => {
       try {
-        const res = await fetch("http://192.168.1.3:5000/api/current");
+        const res = await fetch("<your url>");
         if (!res.ok) throw new Error("No data");
         const data = await res.json();
         setYlaTemp(data.yla_temperature ?? null);
