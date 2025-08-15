@@ -65,7 +65,7 @@ function Alahistoria() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch(`your url?range=${range.minutes}`)
+        const res = await fetch(`<your url>?range=${range.minutes}`)
         const data = await res.json()
 
         const formatted = data.map((entry: { timestamp: number; ala_temperature: any }) => ({
