@@ -25,30 +25,49 @@ IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flas
 ## 🛠️ Project Process
 
 ### Motivation
-TempTrack-IoT was created to monitor temperature in real-time across multiple locations in a local network, providing both live and historical data via an easy-to-access web dashboard.
+TempTrack-IoT was created to monitor temperature in real-time across multiple locations in a local network, providing both live and historical data via an easy-to-access web dashboard for my family’s house.  
+The main goal was to track the upper and lower water temperatures of our hot tub, and also gather data from a nearby lake.
 
 ### Hardware Selection
-- **ESP32** – Affordable, WiFi-enabled microcontroller ideal for IoT sensors
-- **Dallas Temperature Sensors** – Reliable and accurate for multiple sensor setups
-- **Raspberry Pi 5** – Low-cost local server to host backend API and frontend dashboard
+**Outside Unit**
+- ESP32-S3-DevkitM-1U
+- DS18B20 digital temperature sensors (two for hot tub, one for lake)
+- 20,000 mAh power bank
+- DS18B20 resistor module
+- F3 green indicator LED
+- 12 V round rocker switch (SPST, ON/OFF)
+- WiFi/GSM antenna (2.4 G, 3 dBi)
+- USB-C cable (for charging power bank)
+- Micro-USB cable (power from bank to ESP)
+- Waterproof sealing tape and epoxy
+
+**Inside Unit**
+- Raspberry Pi 5  
+- Raspberry Pi active cooler  
+- Raspberry Pi 27 W USB-C power supply
 
 ### Architecture Design
 The system is split into three main components:
-1. **ESP32 Sensor Nodes** – Read temperature and send JSON data over WiFi
-2. **Flask Backend (Raspberry Pi 5)** – Receives data from sensors and stores it
+1. **ESP32 Sensor Nodes** – Read temperature and send JSON data over WiFi  
+2. **Flask Backend (Raspberry Pi 5)** – Receives data from sensors and stores it  
 3. **React + Vite + Tailwind + ShadCN Dashboard** – Displays real-time and historical data
 
 ### Development Steps
-1. Prototype ESP32 sensors with PlatformIO and Dallas Temperature sensors  
-2. Build Flask backend with API endpoints to receive and serve sensor data  
-3. Develop responsive React dashboard with live charts and historical views  
-4. Integrate backend and frontend, test on local network  
-5. Automate startup with systemd services on Raspberry Pi  
+1. Prototyped ESP32 sensors with PlatformIO and Dallas Temperature library  
+2. Built Flask backend with API endpoints to receive and serve sensor data  
+3. Designed the dashboard layout in [Figma](https://www.figma.com/design/TWQNi1zcBEpw2G51kZiim7/Paljuproject?node-id=0-1&m=dev)  
+4. Developed responsive React dashboard with live charts and historical views  
+5. Integrated backend and frontend, tested on local network  
+6. Automated startup with systemd services on Raspberry Pi  
+7. Assembled outdoor hardware with waterproofing for durability  
 
-### Future Improvements
-- Add authentication for dashboard access  
-- Support additional sensor types (humidity, pressure, etc.)  
-- Enable remote access with secure tunneling or VPN
+### Future Improvements 
+- Enable secure remote access via VPN or tunneling  
+- Design a custom PCB to reduce wiring clutter and save space in the enclosure  
+- Improve power bank accessibility and charging convenience  
+- Enhance the web dashboard design for an even more appealing and intuitive user experience
+
+---
 ## 📸 Screenshots
 
 _Add screenshots of your dashboard here to make it visually appealing._
