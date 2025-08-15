@@ -1,4 +1,4 @@
-# TempTrack-IoT 🚀
+# TempTrack-IoT <img src="paljuproject/frontend/public/myicons/temperatures.png" alt="TempTrack Logo" width="30"/>
 
 IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flask backend on a Raspberry Pi 5. A React + Vite + Tailwind + ShadCN dashboard displays real-time and historical readings on any device in the local network.
 
@@ -72,11 +72,6 @@ The system is split into three main components:
 
 _Add screenshots of your dashboard here to make it visually appealing._
 
----
-
-## ⚡ Data Flow
-
-ESP32 Sensor -> WiFi -> Flask API (Raspberry Pi 5) -> Local Web Dashboard (React)
 
 ---
 
