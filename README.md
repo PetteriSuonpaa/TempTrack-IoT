@@ -22,24 +22,24 @@ The inside shows the ESP32, wiring, and power bank setup:
 
 ### Homepage (Light & Dark Mode)
 <div style="display: flex; gap: 10px;">
-  <img src="homepage_light.jpg" alt="Dashboard Homepage Light Mode" width="400"/>
-  <img src="homepage_dark.jpg" alt="Dashboard Homepage Dark Mode" width="400"/>
+  <img src="homepage_light.jpg" alt="Dashboard Homepage Light Mode" width="400" height="700"/>
+  <img src="homepage_dark.jpg" alt="Dashboard Homepage Dark Mode" width="400" height="700"/>
+</div>
+
+---
+### History – Upper Sensor (Light & Dark Mode)
+<div style="display: flex; gap: 10px;">
+  <img src="uppertemp_history_light.jpg" alt="Upper Sensor History Light Mode" width="400" height="700"/>
+  <img src="uppertemp_history_dark.jpg" alt="Upper Sensor History Dark Mode" width="400" height="700"/>
 </div>
 
 ---
 
-### Real-Time Monitoring
-![Dashboard Realtime](dashboard_realtime.png)
-
----
-
-### History – Upper Sensor
-![Upper Sensor History](uppertemp_history_light.jpg)
-
----
-
-### History – Lower Sensor
-![Lower Sensor History](downtemp_light.jpg)
+### History – Lower Sensor (Light & Dark Mode)
+<div style="display: flex; gap: 10px;">
+  <img src="downtemp_light.jpg" alt="Lower Sensor History Light Mode" width="400" height="700"/>
+  <img src="downtemp_history_dark.jpg" alt="Lower Sensor History Dark Mode" width="400" height="700"/>
+</div>
 
 ---
 ### 🌟 Why I Built This
