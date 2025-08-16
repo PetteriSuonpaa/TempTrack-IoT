@@ -3,13 +3,43 @@
 IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flask backend on a Raspberry Pi 5. A React + Vite + Tailwind + ShadCN dashboard displays real-time and historical readings on any device in the local network.
 
 ---
-### 📸 Demo
+## 📸 Hardware Photos
 
-**The Device**
-![Hot Tub Device](paljuproject/docs/images/device.jpg)
+### Outside View
+Here’s the waterproof enclosure fully assembled:
 
-**The Dashboard**
-![Dashboard Screenshot](paljuproject/docs/images/dashboard.png)
+<img src="device_outside_1.jpg" alt="Outside Device" width="400"/> <img src="device_outside_2.jpg" alt="Outside Device Side View" width="400"/>
+
+---
+
+### Inside View
+The inside shows the ESP32, wiring, and power bank setup:
+
+<img src="device_inside.jpg" alt="Inside Device" width="400"/>
+
+
+---
+
+### Homepage (Light & Dark Mode)
+<div style="display: flex; gap: 10px;">
+  <img src="homepage_light.jpg" alt="Dashboard Homepage Light Mode" width="400"/>
+  <img src="homepage_dark.jpg" alt="Dashboard Homepage Dark Mode" width="400"/>
+</div>
+
+---
+
+### Real-Time Monitoring
+![Dashboard Realtime](dashboard_realtime.png)
+
+---
+
+### History – Upper Sensor
+![Upper Sensor History](uppertemp_history_light.jpg)
+
+---
+
+### History – Lower Sensor
+![Lower Sensor History](downtemp_light.jpg)
 
 ---
 ### 🌟 Why I Built This
