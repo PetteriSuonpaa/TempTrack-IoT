@@ -3,18 +3,30 @@
 IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flask backend on a Raspberry Pi 5. A React + Vite + Tailwind + ShadCN dashboard displays real-time and historical readings on any device in the local network.
 
 ---
+### 📸 Demo
 
-## 🌟 Features
+**The Device**
+![Hot Tub Device](paljuproject/docs/images/device.jpg)
 
-- Real-time and historical temperature visualization  
-- Multi-sensor support (ESP32 + Dallas Temperature sensors)  
-- Local web dashboard hosted on Raspberry Pi 5  
-- Easy to expand with new sensors  
-- JSON API for data collection  
+**The Dashboard**
+![Dashboard Screenshot](paljuproject/docs/images/dashboard.png)
+
+---
+### 🌟 Why I Built This
+I wanted a **smart, reliable way to monitor hot tub water temperature** for my family’s house, while also experimenting with **IoT hardware, APIs, and full-stack web apps**.  
+The goal was to have both **upper and lower water temperatures** logged continuously, with real-time access on any device in our local network.  
+
+---
+### 🚀 What I Did
+- Designed and assembled waterproof ESP32 sensor units  
+- Implemented temperature readings with DS18B20 probes  
+- Built a Flask backend API for collecting and serving data  
+- Developed a React + Tailwind + ShadCN dashboard with live charts  
+- Automated backend + frontend startup on Raspberry Pi with systemd  
 
 ---
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 - **ESP32 / PlatformIO** – Sensor nodes and firmware  
 - **Flask (Python)** – Backend API server  
@@ -22,60 +34,39 @@ IoT temperature monitoring system with ESP32 sensor nodes sending data to a Flas
 - **Raspberry Pi 5** – Local server and dashboard hosting  
 
 ---
-## 🛠️ Project Process
+### 🔧 System Architecture
+The project is split into three layers:  
 
-### Motivation
-TempTrack-IoT was created to monitor temperature in real-time across multiple locations in a local network, providing both live and historical data via an easy-to-access web dashboard for my family’s house.  
-The main goal was to track the upper and lower water temperatures of our hot tub, and also gather data from a nearby lake.
+1. **ESP32 Sensor Nodes** → Collect water temperature and send JSON data over WiFi  
+2. **Flask Backend (Raspberry Pi 5)** → Receives + stores data from sensors  
+3. **React Dashboard** → Displays real-time + historical temperature data  
 
-### Hardware Selection
+---
+### 🛠️ Hardware
 **Outside Unit**
-- ESP32-S3-DevkitM-1U
-- DS18B20 digital temperature sensors (two for hot tub, one for lake)
-- 20,000 mAh power bank
-- DS18B20 resistor module
-- F3 green indicator LED
-- 12 V round rocker switch (SPST, ON/OFF)
-- WiFi/GSM antenna (2.4 G, 3 dBi)
-- USB-C cable (for charging power bank)
-- Micro-USB cable (power from bank to ESP)
-- Waterproof sealing tape and epoxy
+- ESP32-S3-DevkitM-1U  
+- DS18B20 digital temperature sensors (two for hot tub, one for lake)  
+- 20,000 mAh power bank  
+- DS18B20 resistor module with 4.7 kΩ pull-up  
+- Indicator LED + switch  
+- Waterproof sealing tape + epoxy  
 
 **Inside Unit**
 - Raspberry Pi 5  
-- Raspberry Pi active cooler  
-- Raspberry Pi 27 W USB-C power supply
+- Active cooler + 27W USB-C power supply  
 
-### Architecture Design
-The system is split into three main components:
-1. **ESP32 Sensor Nodes** – Read temperature and send JSON data over WiFi  
-2. **Flask Backend (Raspberry Pi 5)** – Receives data from sensors and stores it  
-3. **React + Vite + Tailwind + ShadCN Dashboard** – Displays real-time and historical data
-
-### Development Steps
-1. Prototyped ESP32 sensors with PlatformIO and Dallas Temperature library  
-2. Built Flask backend with API endpoints to receive and serve sensor data  
-3. Designed the dashboard layout in [Figma](https://www.figma.com/design/TWQNi1zcBEpw2G51kZiim7/Paljuproject?node-id=0-1&m=dev)  
-4. Developed responsive React dashboard with live charts and historical views  
-5. Integrated backend and frontend, tested on local network  
-6. Automated startup with systemd services on Raspberry Pi  
-7. Assembled outdoor hardware with waterproofing for durability  
-
-### Future Improvements 
-- Enable secure remote access via VPN or tunneling  
-- Design a custom PCB to reduce wiring clutter and save space in the enclosure  
-- Improve power bank accessibility and charging convenience  
-- Enhance the web dashboard design for an even more appealing and intuitive user experience
-
----
-## 📸 Screenshots
-
-_Add screenshots of your dashboard here to make it visually appealing._
-
+### 🖥️ Development Process
+1. Prototyped ESP32 firmware with Dallas Temperature library  
+2. Built Flask backend with JSON endpoints  
+3. Designed dashboard UI in [Figma](https://www.figma.com/design/TWQNi1zcBEpw2G51kZiim7/Paljuproject?node-id=0-1&m=dev)  
+4. Implemented responsive React frontend with charts  
+5. Integrated backend ↔ frontend  
+6. Automated startup with systemd services  
+7. Waterproofed & assembled outdoor unit  
 
 ---
 
-## 💡 Setup Instructions
+### 💡 Setup Instructions
 
 ### 1️⃣ ESP32 Sensor Nodes (PlatformIO / Arduino)
 
@@ -181,3 +172,12 @@ Enable and start:
 ```
 ✅ Now both backend and frontend will automatically start on Raspberry Pi boot.
 
+---
+
+### Future Improvements 
+- Enable secure remote access via VPN or tunneling  
+- Design a custom PCB to reduce wiring clutter and save space in the enclosure  
+- Improve power bank accessibility and charging convenience  
+- Enhance the web dashboard design for an even more appealing and intuitive user experience
+
+---
