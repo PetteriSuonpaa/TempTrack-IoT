@@ -12,7 +12,7 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",           // Serve on all network interfaces
-    port: 5173,                // Keep default or change if you like
+    port: ???,                // Keep default or change if you like
     proxy: {
       "/api": "???", // Proxy API calls to Flask
     },
