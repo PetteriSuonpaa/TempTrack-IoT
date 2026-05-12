@@ -14,7 +14,7 @@ export default defineConfig({
     host: "0.0.0.0",           // Serve on all network interfaces
     port: 5173,                // Keep default or change if you like
     proxy: {
-      "/api": "http://192.168.1.3:5000", // Proxy API calls to Flask
+      "/api": "???", // Proxy API calls to Flask
     },
   },
 });
